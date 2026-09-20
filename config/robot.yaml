@@ -10,9 +10,11 @@ network:
 
 arms:
   left:
+    serial: YAM-26080178
     can_interface: can_left
     ros_namespace: /yam/left
   right:
+    serial: YAM-26080173
     can_interface: can_right
     ros_namespace: /yam/right
 
