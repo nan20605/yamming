@@ -1,30 +1,7 @@
 # YAMMING
 
-A reproducible bring-up, control, simulation, calibration, and real→sim→real workspace for the
-I2RT bimanual YAM + NVIDIA Jetson research rig.
-
-## Tonight's hard gates
-
-Do **not** jump ahead because a later layer looks more exciting.
-
-1. `G0` — physical rig is bolted down, 1 m arm clearance, power switch reachable.
-2. `G1` — Jetson boots headless and is reachable by SSH.
-3. `G2` — official I2RT SDK installs and the vendor MuJoCo viewer loads.
-4. `G3` — both CAN adapters are detected and mapped deterministically to left/right.
-5. `G4` — each arm's joint state can be read.
-6. `G5` — each arm passes the official gravity-compensation test individually.
-7. `G6` — each arm executes one tiny, reversible, rate-limited joint motion.
-8. `G7` — both arms can be controlled reproducibly from the Jetson.
-9. `G8` — ROS 2 is installed and can mirror live joint states.
-10. `G9` — live real→sim state mirroring works using the official YAM model.
-11. `G10` — calibration data layout exists for base transforms, camera intrinsics/extrinsics,
-   joint zero offsets, friction/damping, latency, and system-ID trials.
-12. `G11` — only after identification: domain-randomization ranges are generated from measured
-   residuals, not guessed.
-13. `G12` — sim→real validation compares the same command/trajectory in sim and on hardware.
-
-A real, validated real→sim→real pipeline is more than "the XML opens in MuJoCo." This repository
-keeps those claims separate so we do not fool ourselves.
+Bring-up, control, simulation, calibration, and real→sim→real workspace for the
+I2RT bimanual YAM + NVIDIA Jetson research rig. 
 
 ## Architecture
 
@@ -38,9 +15,6 @@ NVIDIA Jetson  ─────────── ROS 2 / logging / cameras / pol
   ├── CAN adapter ── can_left  ── YAM left
   │
   └── CAN adapter ── can_right ── YAM right
-
-Hardware control stays local to the Jetson.
-Do not put campus Wi-Fi inside the motor-control loop.
 ```
 
 The YAM arm itself uses **CAN**, not I2C, for motor communication. I2C can still appear elsewhere
