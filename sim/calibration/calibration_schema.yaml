@@ -1,0 +1,42 @@
+schema_version: 1
+
+metadata:
+  robot: yam_bimanual
+  date: null
+  i2rt_commit: null
+
+base_transforms:
+  left:
+    T_world_base: null
+    covariance_6x6: null
+    method: null
+  right:
+    T_world_base: null
+    covariance_6x6: null
+    method: null
+
+joint_offsets:
+  left:
+    offset_rad: [null, null, null, null, null, null]
+    std_rad: [null, null, null, null, null, null]
+  right:
+    offset_rad: [null, null, null, null, null, null]
+    std_rad: [null, null, null, null, null, null]
+
+timing:
+  command_to_motion_latency_ms:
+    left: null
+    right: null
+  state_timestamp_offset_ms:
+    left: null
+    right: null
+
+dynamics:
+  left:
+    coulomb_friction: [null, null, null, null, null, null]
+    viscous_damping: [null, null, null, null, null, null]
+  right:
+    coulomb_friction: [null, null, null, null, null, null]
+    viscous_damping: [null, null, null, null, null, null]
+
+cameras: {}

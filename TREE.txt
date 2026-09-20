@@ -1,0 +1,74 @@
+.gitignore
+Makefile
+README.md
+config/
+  robot.yaml
+  ros.env.example
+data/
+  calibration/
+    base_transforms/
+      .gitkeep
+    cameras/
+      .gitkeep
+    dynamics/
+      .gitkeep
+    joints/
+      .gitkeep
+    timing/
+      .gitkeep
+  processed/
+    .gitkeep
+  raw/
+    .gitkeep
+  trajectories/
+    .gitkeep
+docs/
+  ARCHITECTURE.md
+  CAN_VS_I2C.md
+  LAB_LOG_TEMPLATE.md
+  NIGHT_RUNBOOK.md
+  REAL2SIM2REAL.md
+  ROS2_NOTES.md
+logs/
+  .gitkeep
+ros2_ws/
+  src/
+    yam_ros_bridge/
+      package.xml
+      resource/
+        yam_ros_bridge
+      setup.cfg
+      setup.py
+      yam_ros_bridge/
+        __init__.py
+        hardware_node.py
+scripts/
+  00_diagnose.sh
+  01_bootstrap_i2rt.sh
+  02_can_inventory.sh
+  03_setup_headless_ssh.sh
+  04_install_can_names.sh
+  05_can_up.sh
+  06_safe_nudge.py
+  07_snapshot_bimanual_state.sh
+  08_install_ros2.sh
+  09_setup_ros_bridge_env.sh
+  10_build_ros_ws.sh
+  11_snapshot_vendor_model.sh
+  12_init_git.sh
+  read_arm_state.py
+  source_ros.sh
+  source_ros_base.sh
+sim/
+  calibration/
+    calibration_schema.yaml
+  domain_randomization/
+    README.md
+  experiments/
+    README.md
+  model/
+    README.md
+tests/
+  test_repo_layout.py
+third_party/
+  .gitkeep

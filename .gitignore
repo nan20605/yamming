@@ -1,0 +1,17 @@
+.venv/
+.venv_ros/
+__pycache__/
+*.pyc
+logs/*
+!logs/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/trajectories/*
+!data/trajectories/.gitkeep
+third_party/i2rt/
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+.DS_Store

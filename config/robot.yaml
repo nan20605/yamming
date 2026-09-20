@@ -1,0 +1,35 @@
+robot:
+  name: yam_bimanual
+  host: yam-jetson
+  arm_type: yam
+  gripper_type: linear_4310
+
+network:
+  ros_domain_id: 42
+  prefer_hardware_control_on_jetson: true
+
+arms:
+  left:
+    can_interface: can_left
+    ros_namespace: /yam/left
+  right:
+    can_interface: can_right
+    ros_namespace: /yam/right
+
+# Replace these after measurement. Units are metres and radians.
+# Convention: T_world_base is world <- arm base.
+transforms:
+  left_base:
+    xyz: [0.0, 0.0, 0.0]
+    rpy: [0.0, 0.0, 0.0]
+    status: uncalibrated
+  right_base:
+    xyz: [0.0, 0.0, 0.0]
+    rpy: [0.0, 0.0, 0.0]
+    status: uncalibrated
+
+safety:
+  first_nudge_degrees: 2.0
+  max_first_nudge_degrees: 5.0
+  require_clear_workspace: true
+  require_operator_at_power_switch: true
